@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="loginSuite">
+	
+	
+	<!-- approach 1 (all testCases should be mentioned under individual test tag)-->
+	
+	<!--<test name="LoginTest">
+		<classes>
+				<class name="ddf_approach_1.loginTestCase_CorrectCredentials"></class>
+				<class name="ddf_approach_1.CorrectUsername"></class>
+				<class name="ddf_approach_1.CorrectPassword"></class>
+				<class name="ddf_approach_1.InCorrectCredentials"></class>
+		</classes>
+	</test>-->
+	
+
+	<!-- another approach 1.1 **** passing parameter from XML file -->
+	
+	<!--<test name="CorrectCredentials">
+		<parameter name="username" value="Admin"></parameter>
+		<parameter name="password" value="admin123"></parameter>
+		<classes>
+			<class name="ddf_approach_1.loginTestCase_CorrectCredentials"></class>
+		</classes>
+	</test>
+	
+	
+	<test name="CorrectUserName">	
+		<parameter name="username" value="Admin"></parameter>
+		<parameter name="password" value="dummy"></parameter>
+		<classes>
+			<class name="ddf_approach_1.CorrectUsername"></class>
+		</classes>
+	</test>
+	
+	
+	<test name="CorrectPassword">	
+		<parameter name="username" value="bava"></parameter>
+		<parameter name="password" value="admin123"></parameter>
+		<classes>
+			<class name="ddf_approach_1.CorrectPassword"></class>
+		</classes>
+	</test>
+	
+	
+	<test name="InCorrectCredentials">	
+		<parameter name="username" value="bava"></parameter>
+		<parameter name="password" value="dummy"></parameter>
+		<classes>
+			<class name="ddf_approach_1.InCorrectCredentials"></class>
+		</classes>
+	</test>-->
+	
+	
+	<!-- approach 2 *** passing values using DataProvider annotations -->
+	<!--<test name="CorrectCredentials">
+		<classes>
+			<class name="ddf_approach_2.LoginTestCase"></class>
+		</classes>
+	</test>-->
+	
+	
+	
+	<!-- approach 3 *** passing values from excel sheet using JXL-->
+	
+	<!--<test name="CorrectCredentials">
+		<classes>
+			<class name="ddf_approach_3.LoginTestCase_UsingDataProvider"></class>
+		</classes>
+	</test>-->
+	
+	
+	
+	<!-- approach 4 *** passing values from excel sheet using Apache POI-->
+	
+	<test name="CorrectCredentials">
+		<classes>
+			<class name="ddf_approach_3.LoginTestCase_UsingDataProvider"></class>
+		</classes>
+	</test>
+	
+	
+</suite>
+
